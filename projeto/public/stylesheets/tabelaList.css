@@ -1,0 +1,49 @@
+.corpo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.quadrado {
+  text-align: center;
+  color: black;
+  width: 50%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0 10px 15px 10px;
+}
+
+.titulo {
+  font-size: 32px;
+}
+
+.subtitulo {
+  font-size: 24px;
+}
+
+.tabela {
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+}
+
+.linha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.linha td,
+th {
+  width: 50%;
+  border-left: 1px solid black;
+  padding: 5px;
+}
