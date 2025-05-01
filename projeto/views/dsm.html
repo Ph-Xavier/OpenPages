@@ -3,43 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/stylesheets/tabelaList.css" />
+    <link rel="stylesheet" href="../public/stylesheets/tabela.css" />
     <title>DSM</title>
   </head>
   <body>
-    <section class="corpo">
+    <main>
       <h1 class="titulo">DSM</h1>
       <h2 class="subtitulo">Desenvolvimento de Software Multiplataforma</h2>
-      <div class="quadrado">
-        <table class="tabela">
-          <header>
-            <thead>
-              <tr class="linha">
-                <th>Livro</th>
-                <th>Autor</th>
-                <th>Disponibilidade</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="linha">
-                <td>Engenharia de Software</td>
-                <td>Roger S.Pressman</td>
-                <td>Disponível</td>
-              </tr>
-              <tr class="linha">
-                <td>Código Limpo</td>
-                <td>Robert C.Martin</td>
-                <td>Disponível</td>
-              </tr>
-              <tr class="linha">
-                <td>Introdução à Programação com Python</td>
-                <td>Nilo N.Menezes</td>
-                <td>Indisponível</td>
-              </tr>
-            </tbody>
-          </header>
-        </table>
-      </div>
-    </section>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>Livro</th>
+            <th>Autor</th>
+            <th>Disponibilidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Engenharia de Software</td>
+            <td>Roger S. Pressman</td>
+            <td class="disponivel">Disponível</td>
+          </tr>
+          <tr>
+            <td>Código Limpo</td>
+            <td>Robert C. Martin</td>
+            <td class="disponivel">Disponível</td>
+          </tr>
+          <tr>
+            <td>Introdução à Programação com Python</td>
+            <td>Nilo N. Menezes</td>
+            <td class="indisponivel">Indisponível</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
   </body>
 </html>
