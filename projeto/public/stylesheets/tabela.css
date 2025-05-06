@@ -1,4 +1,6 @@
 main {
+  font-family: var(--font-family), Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
   text-align: center;
   padding: 40px 16px;
 }

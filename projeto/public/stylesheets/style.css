@@ -1,6 +1,15 @@
+:root {
+  --primary-color: #45483B;
+  --title-color: #000000;
+  --text-color-light: #F6F6F6;
+  --background-color: #FCF9F3;
+  --font-family: "Inter", Helvetica, Arial, sans-serif;
+};
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px var(--font-family);
+  background-color: var(--background-color);
 }
 
 a {
