@@ -6,6 +6,7 @@ main {
 }
 
 .titulo {
+  color: var(--title-color);
   font-size: 28px;
   margin-bottom: 8px;
 }
@@ -13,7 +14,7 @@ main {
 .subtitulo {
   font-size: 20px;
   font-weight: normal;
-  color: #444;
+  color: var(--title-color);
 }
 
 .tabela {
@@ -28,7 +29,7 @@ main {
 }
 
 thead th {
-  background-color: #444738;
+  background-color: var(--primary-color);
   color: white;
   text-align: left;
   padding: 12px;
