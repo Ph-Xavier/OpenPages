@@ -10,8 +10,8 @@
 }
 
 .botao-curso {
-  background-color: #44483e;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
   text-decoration: none;
   padding: 20px;
   border-radius: 12px;
