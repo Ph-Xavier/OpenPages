@@ -21,6 +21,19 @@
   width: 40px;
   height: auto;
   padding-left: 10px;
+  animation: floatBook 3s ease-in-out infinite;
+}
+
+@keyframes floatBook {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
 .title-logo {
