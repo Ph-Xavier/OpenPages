@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../public/stylesheets/style.css" />
     <link rel="stylesheet" href="../public/stylesheets/navbar.css" />
     <link rel="stylesheet" href="../public/stylesheets/tabela.css" />
-    
+    <link rel="stylesheet" href="../public/stylesheets/busca.css" />
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
     <title>ADS</title>
   </head>
@@ -32,6 +32,13 @@
     <main>
       <h1 class="titulo">ADS</h1>
       <h2 class="subtitulo">Análise e Desenvolvimento de Sistemas</h2>
+      <div class="container-busca">
+        <input
+          type="text"
+          class="campo-busca"
+          placeholder="Pesquisar livros..."
+        />
+      </div>
       <table class="tabela">
         <thead>
           <tr>
@@ -59,5 +66,6 @@
         </tbody>
       </table>
     </main>
+    <script src="../public/javascripts/busca.js"></script>
   </body>
 </html>
