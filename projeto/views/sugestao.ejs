@@ -9,24 +9,24 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../public/stylesheets/style.css" />
-    <link rel="stylesheet" href="../public/stylesheets/navbar.css" />
-    <link rel="stylesheet" href="../public/stylesheets/formulario.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
+    <link rel="stylesheet" href="/stylesheets/formulario.css" />
 
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
     <title>Sugestão de livro</title>
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <a href="../views/home.html"
-          ><img src="../assets/logoOpenPages.svg" alt="Logo OpenPages"
+        <a href="/"
+          ><img src="/assets/logoOpenPages.svg" alt="Logo OpenPages"
         /></a>
       </div>
       <ul class="nav-links">
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./sugestao.html">Sugestão de Livro</a></li>
-        <li><a href="./sobre.html">Sobre</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/sugestao">Sugestão de Livro</a></li>
+        <li><a href="/sobre">Sobre</a></li>
       </ul>
     </nav>
     <main class="form-container">
@@ -38,7 +38,9 @@
         <label for="email">E-mail <span class="required">*</span></label>
         <input type="email" id="email" name="email" required />
 
-        <label for="curso">Curso / Matéria <span class="required">*</span></label>
+        <label for="curso"
+          >Curso / Matéria <span class="required">*</span></label
+        >
         <select id="curso" name="curso" required>
           <option value="">Selecione</option>
           <option value="DSM">DSM</option>
@@ -47,10 +49,14 @@
           <option value="GRH">GRH</option>
         </select>
 
-        <label for="titulo">Título do Livro <span class="required">*</span></label>
+        <label for="titulo"
+          >Título do Livro <span class="required">*</span></label
+        >
         <input type="text" id="titulo" name="titulo" required />
 
-        <label for="autor">Autor do Livro <span class="required">*</span></label>
+        <label for="autor"
+          >Autor do Livro <span class="required">*</span></label
+        >
         <input type="text" id="autor" name="autor" required />
 
         <label for="observacoes">Observações:</label>
@@ -60,7 +66,7 @@
           rows="4"
           placeholder="Você pode adicionar informações como edição, editora, motivo da sugestão etc."
         ></textarea>
-        
+
         <p class="form-required-note">* Campos obrigatórios</p>
 
         <button type="submit">Enviar Sugestão</button>
