@@ -4,7 +4,13 @@ let path = require("path");
 let cookieParser = require("cookie-parser");
 let logger = require("morgan");
 
-let indexRouter = require("./routes/index");
+let indexRouter = require("./routes/indexRouter");
+let dsmRouter = require("./routes/dsmRouter");
+let adsRouter = require("./routes/adsRouter");
+let gpiRouter = require("./routes/gpiRouter");
+let grhRouter = require("./routes/grhRouter");
+let sobreRouter = require("./routes/sobreRouter");
+let sugestaoRouter = require("./routes/sugestaoRouter");
 
 let app = express();
 
@@ -20,6 +26,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 
 app.use("/", indexRouter);
+app.use("/dsm", dsmRouter);
+app.use("/ads", adsRouter);
+app.use("/gpi", gpiRouter);
+app.use("/grh", grhRouter);
+app.use("/sobre", sobreRouter);
+app.use("/sugestao", sugestaoRouter);
 
 // catch 404
 app.use(function (req, res, next) {
