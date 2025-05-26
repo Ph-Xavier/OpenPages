@@ -44,25 +44,30 @@
           <tr>
             <th>Livro</th>
             <th>Autor</th>
+            <th>Editora</th>
+            <th>Edição</th>
             <th>Disponibilidade</th>
           </tr>
         </thead>
         <tbody>
+          <% if (livros && livros.length > 0) { %> <%
+          livros.forEach(function(livro) { %>
           <tr>
-            <td>Engenharia de Software</td>
-            <td>Roger S. Pressman</td>
-            <td class="disponivel">Disponível</td>
+            <td><%= livro.titulo %></td>
+            <td><%= livro.autor %></td>
+            <td><%= livro.editora %></td>
+            <td><%= livro.edicao %></td>
+            <td
+              class="<%= livro.disponibilidade ? 'disponivel' : 'indisponivel' %>"
+            >
+              <%= livro.disponibilidade ? 'Disponível' : 'Indisponível' %>
+            </td>
           </tr>
+          <% }); %> <% } else { %>
           <tr>
-            <td>Código Limpo</td>
-            <td>Robert C. Martin</td>
-            <td class="disponivel">Disponível</td>
+            <td colspan="5">Nenhum livro encontrado</td>
           </tr>
-          <tr>
-            <td>Introdução à Programação com Python</td>
-            <td>Nilo N. Menezes</td>
-            <td class="indisponivel">Indisponível</td>
-          </tr>
+          <% } %>
         </tbody>
       </table>
     </main>

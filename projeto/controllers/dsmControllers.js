@@ -1,7 +1,18 @@
+const openPagesModels = require("../models/openPagesModels");
+
 module.exports = {
   dsm,
 };
 
 function dsm(req, res) {
-  res.render("dsm.ejs", { title: "DSM - Open Pages" });
+  openPagesModels.getLivrosByCurso("DSM", (err, livros) => {
+    if (err) {
+      console.error("Erro ao buscar livros:", err);
+      livros = [];
+    }
+    res.render("dsm", {
+      title: "DSM - Open Pages",
+      livros: livros,
+    });
+  });
 }
