@@ -25,3 +25,13 @@
 .campo-busca::placeholder {
   color: #95a5a6;
 }
+
+.campo-busca--naoEncontrado {
+  text-align: center;
+  padding: 20px;
+}
+
+.campo-busca--sugestao {
+  color: #45483b;
+  text-decoration: underline;
+}
