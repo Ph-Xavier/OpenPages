@@ -31,7 +31,7 @@ app.use("/grh", grhRouter);
 app.use("/sobre", sobreRouter);
 app.use("/sugestao", sugestaoRouter);
 
-// catch 404
+// catch erros
 app.use(function (req, res, next) {
   next(createError(404));
 });

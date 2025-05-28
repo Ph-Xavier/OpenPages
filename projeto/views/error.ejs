@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
+    <link rel="stylesheet" href="/stylesheets/erro.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <title>Erro - OpenPages</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/"
+          ><img src="/assets/logoOpenPages.svg" alt="Logo OpenPages"
+        /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/sugestao">Sugestão de Livro</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    <main class="error-container">
+      <div class="error-code"><%= error.status || 500 %></div>
+      <h1 class="error-message"><%= message %></h1>
+      <p class="error-description">
+        <% if (error.status === 404) { %> A página que você está procurando não
+        foi encontrada. Por favor, verifique o endereço ou retorne à página
+        inicial. <% } else { %> Ocorreu um erro inesperado. Por favor, tente
+        novamente mais tarde. <% } %>
+      </p>
+      <a href="/" class="error-button">Voltar para Home</a>
+    </main>
+  </body>
+</html>
