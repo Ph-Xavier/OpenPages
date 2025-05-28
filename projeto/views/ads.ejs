@@ -39,37 +39,39 @@
           placeholder="Pesquisar livros..."
         />
       </div>
-      <table class="tabela">
-        <thead>
-          <tr>
-            <th>Livro</th>
-            <th>Autor</th>
-            <th>Editora</th>
-            <th>Edição</th>
-            <th>Disponibilidade</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% if (livros && livros.length > 0) { %> <%
-          livros.forEach(function(livro) { %>
-          <tr>
-            <td><%= livro.titulo %></td>
-            <td><%= livro.autor %></td>
-            <td><%= livro.editora %></td>
-            <td><%= livro.edicao %></td>
-            <td
-              class="<%= livro.disponibilidade ? 'disponivel' : 'indisponivel' %>"
-            >
-              <%= livro.disponibilidade ? 'Disponível' : 'Indisponível' %>
-            </td>
-          </tr>
-          <% }); %> <% } else { %>
-          <tr>
-            <td colspan="5">Nenhum livro encontrado</td>
-          </tr>
-          <% } %>
-        </tbody>
-      </table>
+      <div class="tabela-wrapper">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Livro</th>
+              <th>Autor</th>
+              <th>Editora</th>
+              <th>Edição</th>
+              <th>Disponibilidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if (livros && livros.length > 0) { %> <%
+            livros.forEach(function(livro) { %>
+            <tr>
+              <td><%= livro.titulo %></td>
+              <td><%= livro.autor %></td>
+              <td><%= livro.editora %></td>
+              <td><%= livro.edicao %></td>
+              <td
+                class="<%= livro.disponibilidade ? 'disponivel' : 'indisponivel' %>"
+              >
+                <%= livro.disponibilidade ? 'Disponível' : 'Indisponível' %>
+              </td>
+            </tr>
+            <% }); %> <% } else { %>
+            <tr>
+              <td colspan="5">Nenhum livro encontrado</td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
     </main>
     <script src="/javascripts/busca.js"></script>
   </body>

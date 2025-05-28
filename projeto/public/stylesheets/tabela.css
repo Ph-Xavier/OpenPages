@@ -1,25 +1,44 @@
+.tabela-wrapper {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to left, white 30%, rgba(255, 255, 255, 0)) 100% 0;
+  background-size: 50px 100%, 50px 100%;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
 .tabela {
-  margin: 40px auto;
+  margin: 0 auto;
   border-collapse: collapse;
-  width: 80%;
-  max-width: 800px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-width: 600px;
+  box-shadow: var(--shadow-sm);
   border-top: 0;
   border-radius: 10px;
   overflow: hidden;
+  font-size: 16px;
+  background-color: white;
 }
 
 thead th {
   background-color: var(--primary-color);
   color: white;
   text-align: left;
-  padding: 12px;
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 tbody td {
-  padding: 12px;
+  padding: 16px 20px;
   text-align: left;
   border-bottom: 1px solid #ccc;
+  line-height: 1.4;
 }
 
 tbody tr:last-child td {
@@ -34,4 +53,60 @@ tbody tr:last-child td {
 .indisponivel {
   color: red;
   font-weight: 500;
+}
+
+.tabela-wrapper::after {
+  content: "";
+  position: sticky;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.9), transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tabela-wrapper:hover::after {
+  opacity: 1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .tabela-wrapper {
+    width: 98%;
+    margin: 20px auto;
+  }
+
+  .tabela {
+    font-size: 15px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 14px 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tabela-wrapper {
+    width: 100%;
+    margin: 15px auto;
+    border-radius: 8px;
+  }
+
+  .tabela {
+    font-size: 14px;
+    min-width: 480px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 12px 14px;
+  }
+
+  thead th {
+    font-size: 0.95rem;
+  }
 }
