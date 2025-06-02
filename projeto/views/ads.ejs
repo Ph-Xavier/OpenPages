@@ -51,8 +51,7 @@
             </tr>
           </thead>
           <tbody>
-            <% if (livros && livros.length > 0) { %> <%
-            livros.forEach(function(livro) { %>
+            <% livros.forEach(function(livro) { %>
             <tr>
               <td><%= livro.titulo %></td>
               <td><%= livro.autor %></td>
@@ -64,14 +63,32 @@
                 <%= livro.disponibilidade ? 'Disponível' : 'Indisponível' %>
               </td>
             </tr>
-            <% }); %> <% } else { %>
-            <tr>
-              <td colspan="5">Nenhum livro encontrado</td>
-            </tr>
-            <% } %>
+            <% }); %>
           </tbody>
         </table>
       </div>
+      <% if (livros && livros.length > 0) { %>
+      <div class="paginacao">
+        <button
+          class="botao-paginacao"
+          onclick="mudarPagina('anterior')"
+          id="botao-anterior"
+        >
+          ←
+        </button>
+        <span class="info-paginacao">
+          Página <span id="pagina-atual">1</span> de
+          <span id="total-paginas">1</span>
+        </span>
+        <button
+          class="botao-paginacao"
+          onclick="mudarPagina('proxima')"
+          id="botao-proximo"
+        >
+          →
+        </button>
+      </div>
+      <% } %>
     </main>
     <script src="/javascripts/busca.js"></script>
   </body>
