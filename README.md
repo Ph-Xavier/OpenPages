@@ -32,3 +32,29 @@ O OpenPages é uma plataforma educacional que visa democratizar o acesso a livro
 - Iago Rodrigues Pinheiro
 - Kairo Cesar Souza Gomes
 - Pedro Henrique Xavier Constancio
+
+## ⚙️ Pré-requisitos
+
+- Node.js (versão 14 ou superior)
+- MySQL Server
+- npm (Node Package Manager)
+
+## 💻 Como rodar o projeto
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://seu-repositorio/OpenPages.git
+   cd OpenPages/projeto
+   ```
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+3. **Configure o banco de dados:**
+   - Execute o script SQL localizado em `projeto/sql/openPages.sql` no seu MySQL
+   - Edite o arquivo `projeto/config/conexao.js` com os dados do seu banco
+4. **Inicie o servidor:**
+   ```bash
+   npm start
+   ```
+   O sistema estará disponível em: http://localhost:3000
